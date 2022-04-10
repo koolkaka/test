@@ -49,5 +49,5 @@ client.on('messageCreate', message => {
     });
 });
 keepAlive();
-client.login(config.token);
+client.login(process.env.token);
 
