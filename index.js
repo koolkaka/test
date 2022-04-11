@@ -19,7 +19,6 @@ client.on('messageCreate', message => {
     const command = args.shift();
     fs.readdir('./', (err, folders) => {
         var selectedFolder = null;
-        var help ="";
         folders.forEach(folder => {
             if (command.toLowerCase() == folder.toLowerCase()) {
                 selectedFolder = folder;
@@ -49,5 +48,5 @@ client.on('messageCreate', message => {
     });
 });
 keepAlive();
-client.login(process.env.token);
+client.login(config.token);
 
